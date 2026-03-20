@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RS Web Creators</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+
+:root{
+--primary-color:#00d2ff;
+--secondary-color:#3a7bd5;
+--dark-bg:#0f0c29;
+--glass:rgba(255,255,255,0.1);
+--text-white:#ffffff;
+--call-blue:#007bff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:var(--dark-bg);
+color:var(--text-white);
+line-height:1.6;
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 8%;
+background:rgba(15,12,41,0.95);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-img{
+height:45px;
+width:45px;
+border-radius:50%;
+overflow:hidden;
+}
+
+.logo-img img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+.brand-name{
+font-size:22px;
+font-weight:700;
+}
+
+.brand-name span{
+color:var(--primary-color);
+}
+
+/* BUTTON */
+
+.action-btn{
+padding:10px 20px;
+border-radius:50px;
+border:none;
+cursor:pointer;
+font-weight:600;
+display:inline-flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.btn-cl{
+background:var(--call-blue);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('/file_000000008edc71fa84e8b1d6589e5f58.png');
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero-text h1{
+font-size:3.5rem;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+color:var(--primary-color);
+}
+
+.hero-text p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+}
+
+/* TEAM */
+
+.team-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.dev-card{
+background:var(--glass);
+padding:40px;
+border-radius:20px;
+text-align:center;
+}
+
+.profile-img{
+height:100px;
+width:100px;
+border-radius:50%;
+margin:0 auto 20px;
+border:3px solid var(--primary-color);
+overflow:hidden;
+}
+
+.profile-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:rgba(255,255,255,0.05);
+border-radius:15px;
+overflow:hidden;
+transition:0.4s;
+cursor:pointer;
+}
+
+.project-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.project-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+transition:0.4s;
+}
+
+.project-card:hover img{
+transform:scale(1.1);
+}
+
+.project-info{
+padding:20px;
+}
+
+/* FEEDBACK */
+
+.feedback-container{
+background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));
+padding:50px;
+border-radius:30px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+flex-wrap:wrap;
+gap:30px;
+}
+
+.qr-box{
+background:white;
+padding:20px;
+border-radius:15px;
+color:#333;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+text-align:center;
+background:#0a0a1a;
+}
+
+/* FLOATING BUTTONS */
+
+.floating-buttons{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+gap:10px;
+z-index:2000;
+}
+
+.call-btn{
+background:#007bff;
+color:white;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+text-decoration:none;
+}
+
+.whatsapp-btn{
+background:#25D366;
+color:white;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+text-decoration:none;
+}
+
+#portfolio{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo-container">
+<div class="logo-img">
+<img src="/IMG-20260311-WA0006.jpg" alt="RS Web Creators Logo">
+</div>
+<span class="brand-name">RS <span>Web Creators</span></span>
+</div>
+</header>
+
+<section id="home" class="hero">
+<div class="hero-text">
+<h1>Create Your <span>Digital Presence</span></h1>
+<p>Professional Websites by RS Web Creators Team</p>
+<button class="action-btn btn-cl" onclick="showPortfolio()" style="margin:0 auto;">
+See Our Work
+</button>
+</div>
+</section>
+
+<section id="team">
+<h2 class="section-title">Developer Profiles</h2>
+
+<div class="team-grid">
+
+<div class="dev-card">
+<div class="profile-img">
+<img src="/IMG-20251130-WA0015.jpg" alt="Roshan Shewale">
+</div>
+<h3>Roshan Shewale</h3>
+<p>Full-Stack Developer</p>
+<p>9370069831</p>
+</div>
+
+<div class="dev-card">
+
+<p style="color:#00d2ff; font-weight:600; margin-bottom:10px;">⭐ Team Member</p>
+
+<div class="profile-img">
+<img src="/index.html/IMG-20260313-WA0064.jpg" alt="Rohit Sonawane">
+</div>
+
+<h3>Rohit Sonawane</h3>
+<p>Web Designer & UI Expert</p>
+
+</div>
+
+</div>
+<div class="dev-card">
+
+<p style="color:#00d2ff; font-weight:600; margin-bottom:10px;">⭐ Team Member</p>
+
+<div class="profile-img">
+<img src="/index.html/Screenshot_2026-03-19-10-57-16-62_1c337646f29875672b5a61192b9010f9.jpg" alt="New Member">
+</div>
+
+<h3>Mayur pawar</h3>
+<p>guidance + web developer</p>
+
+</div>
+</section>
+
+<section id="portfolio">
+<button onclick="showHome()" class="action-btn btn-cl">⬅ Back</button>
+
+<h2 class="section-title">Our Best Projects</h2>
+
+<div class="portfolio-grid">
+
+<div class="project-card">
+<img src="/IMG-20260201-WA0017(1).jpg">
+<div class="project-info">
+<h4>satrangi motor shop website</h4>
+<a href="https://roshanshewale9763-dotcom.github.io/roshanshewale976.github.io/" class="action-btn btn-cl">
+Live Preview
+</a>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d">
+<div class="project-info">
+<h4>Corporate Business Website</h4>
+<a href="#" class="action-btn btn-cl">Live Preview</a>
+</div>
+</div>
+
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<div class="project-info">
+<h4>Professional Blog Platform</h4>
+<a href="#" class="action-btn btn-cl">Live Preview</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="feedback">
+<div class="feedback-container">
+
+<div>
+<h2>Share Your Feedback</h2>
+<p>Scan the QR code to rate our service.</p>
+</div>
+
+<div class="qr-box">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdBNqRbhedyPfmf76urcBmnmEQqhb3DsVmQPU0h_zVFwDImMw/viewform" target="_blank">
+<img src="/index.html/Screenshot_2026-03-17-19-13-49-38_99c04817c0de5652397fc8b56c3b3817.jpg" alt="QR Code" style="width:150px;height:150px;">
+<p style="margin-top:10px;">Scan Me</p>
+</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 RS Web Creators | Designed by Roshan & Rohit</p>
+</footer>
+
+<div class="floating-buttons">
+<a class="call-btn" href="tel:9370069831">
+<i class="fas fa-phone"></i>
+</a>
+
+<a class="whatsapp-btn" href="https://wa.me/919370069831">
+<i class="fab fa-whatsapp"></i>
+</a>
+</div>
+
+<script>
+
+function showPortfolio(){
+document.getElementById("home").style.display="none";
+document.getElementById("team").style.display="none";
+document.getElementById("portfolio").style.display="block";
+window.scrollTo(0,0);
+}
+
+function showHome(){
+document.getElementById("portfolio").style.display="none";
+document.getElementById("team").style.display="block";
+document.getElementById("home").style.display="flex";
+window.scrollTo(0,0);
+}
+
+</script>
+
+</body>
+</html>
